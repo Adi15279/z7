@@ -1,0 +1,65 @@
+input[type="login"]{
+	margin-top: 20px;
+	width: 450px;
+	color: blue;
+	border: 2px ridge orange;
+	font-family: Verdana,sans-serif;
+    font-size: 1em;
+	font-style: italic;
+	padding: 8px;
+	text-align: left;
+    border-radius: 7px;
+	outline-color: white;
+}
+input[type="password"]{
+	margin-top: 1px;
+	width: 450px;
+	color: blue;
+	border: 2px ridge orange;
+	font-family: Verdana,sans-serif;
+    font-size: 1em;
+	font-style: italic;
+	padding: 8px;
+	text-align: left;
+	margin-bottom: -12px;
+    border-radius: 7px;
+	outline-color: white;
+}
+input[type="submit"]{
+	width: 450px;
+    background: linear-gradient(to bottom,  silver 10%, white 100%);
+    border-radius: 7px;
+    text-decoration: none;
+    font-family: Calibri, Verdana, Arial, sans-serif;
+    padding: 3px 10px;
+	font-weight: bold;
+	color: black;
+	font-size: 1.5em;
+	margin-bottom: 10px;
+	outline-color: silver;
+}
+#pierwszy{
+	margin: auto; 
+	border-style: inset;
+	border-width: 15px;
+	width: 850px;
+	height: auto;
+    border-radius: 30px;
+    box-shadow: 6px 6px 6px gray;
+}
+#drugi{
+	font-size: 2.5em;
+	font-style: italic;
+	font-weight: bold;
+	margin-top: 20px;
+	width: 450px;
+	height: 50px;
+	background-color: white;
+    border: 3px solid silver;
+    border-radius: 7px;
+    box-shadow: 3px 3px 4px black;
+}
+a{
+	display: block;
+	margin-bottom: 5px;
+}
