@@ -5,9 +5,10 @@ input[type="text"]{
 	border-radius: 5px;
 	color: darkorange;
 	font-size: 1em;
-	margin-top: 50px;
+	margin-top: 10px;
+	margin-left: 10px;
 }
-input[type="submit"]{
+#pierwszy input[type="submit"]{
 	display: inline;
 	margin: auto;
 	text-align: center;
@@ -23,9 +24,54 @@ input[type="submit"]{
 	outline-color: silver;
 	margin-right: 1%;
 }
-p{
+input[type="submit"]{
+	border: 2px solid gray;
+	border-radius: 10px;
+	background: linear-gradient(to bottom,  silver 10%, white 100%);
+	padding: 3px 10px;
+}
+input[type="file"]{
+	display: inline;
+	margin: auto;
 	text-align: center;
+	width: auto;
+    background: linear-gradient(to bottom,  silver 10%, white 100%);
+    border-radius: 5px;
+    font-family: Courier New;
+    padding: 3px 10px;
+	font-weight: bold; 
+	color: black;
 	font-size: 1em;
+	margin-bottom: 5px;
+	outline-color: silver;
+	margin-right: 1%;
+}
+#tytul{
+	text-align: center;
+	font-size: 1.2em;
 	font-style: italic;
 	color: blue;
+}
+#folder{
+	color: purple;
+	font-family: "Courier New";
+}
+#folder:hover{
+	font-weight: bold;
+}
+p{
+	color: blue;
+	font-size: 16px;
+}
+a{
+	font-family: "Courier New";
+	color: orange;
+	text-decoration: none;
+}
+#plik{
+	color: orange;
+	font-size: 16px;
+}
+#plik:hover{
+	font-weight: bold;
 }

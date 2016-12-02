@@ -1,19 +1,19 @@
 <?php  
-	session_start(); 																		
-	$login=$_POST['login'];                													
-	$hasło=$_POST['hasło'];                     											
-	$link = mysqli_connect('localhost','','','');   	    
-	if(!$link) { echo"Błąd: ". mysqli_connect_errno()." ".mysqli_connect_error(); }          
-	mysqli_query($link, "SET NAMES 'utf8'");                       							
-	$result = mysqli_query($link, "SELECT * FROM users WHERE login='$login'");               
+	session_start(); 																		//wystartowanie sesji
+	$login=$_POST['login'];                													// login z formularza 
+	$hasło=$_POST['hasło'];                     											// hasło z formularza 
+	$link = mysqli_connect('localhost','','','');   										// połączenie z BD      
+	if(!$link) { echo"Błąd: ". mysqli_connect_errno()." ".mysqli_connect_error(); }         // obsługa błędu połączenia z BD  
+	mysqli_query($link, "SET NAMES 'utf8'");                       							// ustawienie polskich znaków 
+	$result = mysqli_query($link, "SELECT * FROM users WHERE login='$login'");            // pobranie z BD wiersza, w którym login=login     
 	$rekord = mysqli_fetch_assoc($result);                       
-	if(!$rekord){ 																			 
-	  mysqli_close($link);                    												
+	if(!$rekord){ 																			 //Jeśli brak, to nie ma użytkownika o podanym loginie 
+	  mysqli_close($link);                    												 // zamknięcie połączenia z BD 
 	  echo "<center><h2>Błędne dane logowania !</h2><hr><br>";
 	  echo "<a href='index.html'>Powrót</a></center>";                  
 	}   
-	else{                                                     								
-		if($rekord['haslo']===$hasło){  													
+	else{                                                     								// Jeśli  $rekord istnieje 
+		if($rekord['haslo']===$hasło){  													// czy hasło zgadza się z BD 
 			$zapytanie = "select id, data_godz, limit_prob from logi where login='".$login."'";
 			$wynik = mysqli_query($link, $zapytanie);
 			if($wiersz = mysqli_fetch_assoc($wynik)){
@@ -64,7 +64,7 @@
 				$zapytanie="insert into logi values(null,'".$login."',null,1)";
 				mysqli_query($link, $zapytanie);
 			}
-			mysqli_close($link);   															
+			mysqli_close($link);   														
 			echo "<center><h2>Błędne dane logowania!</h2><hr><br>";							
 			echo "<a href='index.html'>Powrót</a></center>";	
 		}  
